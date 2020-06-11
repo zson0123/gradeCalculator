@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Grade Calculator</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="script.js" type="text/javascript"></script>
+</head>
+
+<body id="main">
+
+  <div>
+    <h1 id="titleName">Grade Calculator</h1>
+    <div id="bar"></div>
+    <h2 id="instruct">Instructions: </h2>
+    <p id="descript">Enter the weights of each category and your current grade as <mark id="per">percentages</mark> in the boxes below.</p>
+    <p id="descript"> Then, type in a final grade(numerical) you want and click "Calculate!"</p>
+    <p id="ps">There is a grade scale for reference :)</p>
+    <p id="calc">Time to calculate grades!</p>
+  </div>
+
+  <div class="form-group">
+    <label for="name" class="col-lg-4"></label>
+    <div class="col-lg-4" class="inputBox" id="weight">
+      <label>Weight (%)</label>
+    </div>
+    <div class="col-lg-4" class="inputBox" id="grade">
+      <label>Grade (%)</label>
+    </div>
+
+    <label for="name" class="col-lg-4">Tests:</label>
+    <div class="col-lg-4" class="inputBox">
+      <input type="text" class="form-control" name="testWeight" id="testWeight" min="0" max="100">
+    </div>
+    <div class="col-lg-4" class="inputBox">
+      <input type="text" class="form-control" name="name" id="testGrade" min="0" max="100">
+    </div>
+
+    <label for="name" class="col-lg-4">Homework:</label>
+    <div class="col-lg-4" class="inputBox">
+      <input type="text" class="form-control" name="name" id="hwWeight" min="0" max="100">
+    </div>
+    <div class="col-lg-4">
+      <input type="text" class="form-control" name="name" id="hwGrade" min="0" max="100">
+    </div>
+
+    <label for="name" class="col-lg-4">Quiz:</label>
+    <div class="col-lg-4">
+      <input type="text" class="form-control" name="name" id="quizWeight" min="0" max="100">
+    </div>
+    <div class="col-lg-4">
+      <input type="text" class="form-control" name="name" id="quizGrade" min="0" max="100">
+    </div>
+
+    <label for="name" class="col-lg-4">Class Participation:</label>
+    <div class="col-lg-4">
+      <input type="text" class="form-control" name="name" id="partWeight" min="0" max="100">
+    </div>
+    <div class="col-lg-4">
+      <input type="text" class="form-control" name="name" id="partGrade" min="0" max="100">
+    </div>
+
+    <label for="name" class="col-lg-4">Extra Credit:</label>
+    <div class="col-lg-4" id="ecWeight">
+    </div>
+    <div class="col-lg-4">
+      <input type="text" class="form-control" name="name" id="ecGrade" min="0" max="100">
+    </div>
+
+    <label for="name" class="col-lg-4">Final Exam:</label>
+    <div class="col-lg-4">
+      <input type="text" class="form-control" name="name" id="finalWeight" min="0" max="100">
+    </div>
+    <div class="col-lg-4">
+    </div>
+  </div>
+
+  <div id="testDiv">
+    <br>
+    <p id="need">Calculate what I need on the final to get a <input type="number" name="wanted" id="wanted"> in this class!</p>
+  </div>
+  <p id="myOutput">You need...</p>
+  <input type="button" onclick="grade()" value="Calculate!" id="calcButton">
+
+  <p>
+    <table>
+      <tr>
+        <th>Letter Grade</th>
+        <th>Number</th>
+      </tr>
+      <tr>
+        <td>A</td>
+        <td>90-100</td>
+      </tr>
+      <tr>
+        <td>B</td>
+        <td>80-100</td>
+      </tr>
+      <tr>
+        <td>C</td>
+        <td>70-80</td>
+      </tr>
+      <tr>
+        <td>D</td>
+        <td>60-70</td>
+      </tr>
+      <tr>
+        <td>F</td>
+        <td>60 and below</td>
+      </tr>
+    </table>
+  </p>
+
+  <p id="sadness">If you are feeling sad, <a href="http://www.beaconsinn.com/images/media-cache-ec0.pinimg.com/736x/2b/47/b2/2b47b25700c65bb7b376dd4b307df947.jpg" target="_blank" onclick="window.open('http://www.beaconsinn.com/images/media-cache-ec0.pinimg.com/736x/2b/47/b2/2b47b25700c65bb7b376dd4b307df947.jpg', 'popup', 'height=2000, width=2000'); return false;">click here</a>    or <a href="http://s2.quickmeme.com/img/db/db43ab2c932a401b526416d555005e0d1b745ab3da5bc6785065fee234571ae0.jpg" target="_blank" onclick="window.open('http://s2.quickmeme.com/img/db/db43ab2c932a401b526416d555005e0d1b745ab3da5bc6785065fee234571ae0.jpg', 'popup', 'height=2000, width=2000'); return false;">here</a>
+    <br>
+
+    <img id="gt" src="gt.png">
+
+    <div>
+      <a href="http://www.prism.gatech.edu/~zson3/">Home</a>
+      <a href="https://buzzport.gatech.edu/">Buzzport</a>
+      <a href="https://t-square.gatech.edu/portal">T-Square</a>
+      <a href="https://www.gofundme.com/">Donate</a>
+    </div>
+
+    <p id="hov">Info<span id="infoBox">Made by Zachery Son</span></p>
+
+
+</body>
+
+</html>
